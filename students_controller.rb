@@ -10,13 +10,17 @@ get '/students/?' do
   erb(:index)
 end
 
+# new
+get '/students/new' do
+  erb(:new)
+end
+
 # show
 get '/students/:id' do
   @student = Student.find(params[:id].to_i)
   erb(:student_info)
 end
 
-# new
 
 # create
 
