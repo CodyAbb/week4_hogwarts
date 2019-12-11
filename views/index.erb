@@ -1,7 +1,7 @@
 <div class="student-list">
   <ul>
     <% for student in @students %>
-    <li><a href="/students/<%=students.id%>"><%= student.first_name.capitalize%> <%= student.last_name.capitalize%></a></li>
+    <li><a href="/students/<%=student.id%>"><%= student.first_name.capitalize%> <%= student.last_name.capitalize%></a></li>
     <% end %>
   </ul>
 </div>
