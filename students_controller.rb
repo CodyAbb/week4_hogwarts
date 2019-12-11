@@ -24,7 +24,6 @@ end
 
 # create
 post '/students' do
-
   @student = Student.new(params)
   @student.save
   erb(:create)
@@ -38,6 +37,10 @@ get '/students/:id/edit' do
 end
 
 # update
+post '/students/:id' do
+  student = Student.new(params).update()
+  redirect to '/students'
+end
 
 # destroy
 post '/students/:id/delete' do
