@@ -4,5 +4,9 @@
   <p>House: <%= @student.house.name.capitalize %></p>
   <p>Age: <%= @student.age %></p>
 </div>
+<p><a href="/students/<%= @student.id %>/edit">Edit</a></p>
+<form  action="/students/<%= @student.id %>/delete" method="post">
+  <input type="submit" value="Delete Student">
+</form>
 <hr>
 <a href="/students"><< Back to results</a>
